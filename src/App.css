@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-outer {
+background-image: url('./assets/images/cocktail.jpg');
+min-height: 90vh;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/* body {
+  min-height: 90vh;
+} */
+
+.rounded-corners{
+  border-radius: 20px;
+
+}
+.roundedbtn {
+  padding:8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.nav {
+  background-color: #b3302a;
+  color:white;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:0;
+  overflow: hidden;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
+.nav a {
+  color:white;
+  padding:8px;
+  text-decoration: none;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  a:focus {
+    outline: solid 3px lime;
+    border-radius: 4px;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  footer {
+    padding:20px;
+    display: flex;
+    justify-content: center;
+  background-color: #b3302a;
+  color:white;
   }
-}
+
+  .drink-name-form{
+    display: flex;
+    flex-direction: column;
+    background:#D2453E;
+    padding: 80px;
+  }
+
+  .drink-name-form input{
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  padding:10px;
+  }
+
+  .drink-name-form input:focus{
+    outline: solid 3px lime;
+    border-radius: 4px; 
+    }
+  
+
+  .drink-name-form label{
+   color:white;
+    }
+
+    .drink-name-form button{
+      color:white;
+      background-color: black;
+      padding:20px;
+    
+       }
