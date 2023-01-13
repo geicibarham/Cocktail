@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import Card from "../drink-card/Card";
 const Home = () => {
   const answer = useRef();
+
+  const [data, SetData] = useState([]);
 
   const submit = (e) => {
     e.preventDefault();
@@ -21,21 +24,32 @@ const Home = () => {
       axios
         .request(options)
         .then(function (response) {
-          console.log(response.data);
+          SetData(response.data.drinks);
         })
         .catch(function (error) {
           console.error(error);
         });
     }
   };
+  
+
+  console.log(data)
   return (
-    <div className="home-outer">
-      <form onSubmit={submit} className="drink-name-form rounded-corners">
-        <label htmlFor="drink-name">Enter The Drink Name</label>
-        <input ref={answer} type="text" id="drink-name" />
-        <button className="roundedbtn">Search Drink</button>
-      </form>
-    </div>
+    <>
+      <div className="home-outer">
+        <form onSubmit={submit} className="drink-name-form rounded-corners">
+          <label htmlFor="drink-name">Enter The Drink Name</label>
+          <input ref={answer} type="text" id="drink-name" />
+          <button className="roundedbtn">Search Drink</button>
+          </form>
+          <div className="drink-container">
+        
+             <Card data={data} />
+            
+          </div>
+       
+      </div>
+    </>
   );
 };
 

@@ -5,13 +5,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.nav-icon{
+  width: 34px;
+}
 .home-outer {
 background-image: url('./assets/images/cocktail.jpg');
 min-height: 90vh;
 background-size: cover;
-display: flex;
+display: grid;
 justify-content: center;
-align-items: center;
+
+
 }
 /* body {
   min-height: 90vh;
@@ -66,9 +70,14 @@ align-items: center;
 
   .drink-name-form{
     display: flex;
-    flex-direction: column;
+   height: fit-content;
     background:#D2453E;
-    padding: 80px;
+    padding: 20px;
+    gap:10px;
+    margin-top: 20px;
+    align-items: center;
+    width: fit-content;
+    margin:auto;
   }
 
   .drink-name-form input{
@@ -91,5 +100,31 @@ align-items: center;
       color:white;
       background-color: black;
       padding:20px;
+      width: 50%;
+      height: fit-content;
     
        }
+
+
+.drink-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap:15px;
+
+}
+
+.drink-card{
+  background-color:#000000d4;
+  color:white;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  align-items: center;
+  margin:14px;
+}
+
+.drink-image{
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
