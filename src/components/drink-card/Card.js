@@ -10,7 +10,7 @@ const Card = (props) => {
           className="drink-image"
           width={'300px'}
           alt={item.strDrink} src={item.strDrinkThumb} />
-          {/* <p>Instructions: {item.strInstructions}</p> */}
+         
           
         </div>
       ))}

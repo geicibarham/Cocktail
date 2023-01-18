@@ -1,32 +1,32 @@
 * {
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-.nav-icon{
+.nav-icon {
   width: 34px;
 }
 .home-outer {
-background-image: url('./assets/images/cocktail.jpg');
-min-height: 90vh;
-background-size: cover;
-display: grid;
-justify-content: center;
-
-
+  background-image: url("./assets/images/cocktail.jpg");
+  min-height: 90vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ gap: 20px;
+ padding:20px;
 }
 /* body {
   min-height: 90vh;
 } */
 
-.rounded-corners{
+.rounded-corners {
   border-radius: 20px;
-
 }
 .roundedbtn {
-  padding:8px;
+  padding: 8px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -34,11 +34,10 @@ justify-content: center;
 
 .nav {
   background-color: #b3302a;
-  color:white;
+  color: white;
   align-items: center;
-  margin:0;
   overflow: hidden;
-  padding: 20px 35px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -46,85 +45,150 @@ justify-content: center;
   position: sticky;
   top: 0;
   z-index: 9999;
-
 }
 
 .nav a {
-  color:white;
-  padding:8px;
-  text-decoration: none;}
-
-  a:focus {
-    outline: solid 3px lime;
-    border-radius: 4px;
-  }
-
-
-  footer {
-    padding:20px;
-    display: flex;
-    justify-content: center;
-  background-color: #b3302a;
-  color:white;
-  }
-
-  .drink-name-form{
-    display: flex;
-   height: fit-content;
-    background:#D2453E;
-    padding: 20px;
-    gap:10px;
-    margin-top: 20px;
-    align-items: center;
-    width: fit-content;
-    margin:auto;
-  }
-
-  .drink-name-form input{
-  width: 100%;
-  margin: 20px 0px 20px 0px;
-  padding:10px;
-  }
-
-  .drink-name-form input:focus{
-    outline: solid 3px lime;
-    border-radius: 4px; 
-    }
-  
-
-  .drink-name-form label{
-   color:white;
-    }
-
-    .drink-name-form button{
-      color:white;
-      background-color: black;
-      padding:20px;
-      width: 50%;
-      height: fit-content;
-    
-       }
-
-
-.drink-container {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- gap:15px;
-
+  color: white;
+  padding: 8px;
+  text-decoration: none;
 }
 
-.drink-card{
-  background-color:#000000d4;
-  color:white;
+a:focus {
+  outline: solid 3px lime;
+  border-radius: 4px;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #b3302a;
+  color: white;
+}
+
+.drink-name-form {
+  display: flex;
+  height: fit-content;
+  background: #d2453e;
+  padding: 20px;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  margin-top: 14px;
+  justify-self: center;
+}
+
+.drink-name-form input {
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  padding: 10px;
+}
+
+.drink-name-form input:focus {
+  outline: solid 3px lime;
+  border-radius: 4px;
+}
+
+.drink-name-form label {
+  color: white;
+}
+
+.drink-name-form button {
+  color: white;
+  background-color: black;
+  padding: 20px;
+  width: 50%;
+  height: fit-content;
+}
+
+.drink-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.drink-card {
+  background-color: #000000d4;
+  color: white;
   width: fit-content;
   display: flex;
   flex-direction: column;
-  padding:20px;
+  padding: 20px;
   align-items: center;
-  margin:14px;
+  margin: 14px;
 }
 
-.drink-image{
+.drink-card-error{
+  background-color: #000000d4;
+  color:white;
+  padding:20px;
+  grid-column-start: 2;
+  margin-bottom: 20px;
+  display: inline
+}
+
+.drink-card-error p{
+  font-weight: bold;
+}
+.drink-image {
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.topnav {
+  background-color: #333;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .drink-name-form {
+    margin: 14px 14px 14px 14px;
+  }
+  .link-navbar {
+    display: none;
+  }
+  .drink-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .home-outer {
+    background-image: url("./assets/images/mobile.jpg");
+
+    background-position: center;
+    background-size: cover;
+  }
 }

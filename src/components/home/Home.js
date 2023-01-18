@@ -31,9 +31,6 @@ const Home = () => {
         });
     }
   };
-  
-
-  console.log(data)
   return (
     <>
       <div className="home-outer">
@@ -41,13 +38,11 @@ const Home = () => {
           <label htmlFor="drink-name">Enter The Drink Name</label>
           <input ref={answer} type="text" id="drink-name" />
           <button className="roundedbtn">Search Drink</button>
-          </form>
-          <div className="drink-container">
-        
-             <Card data={data} />
-            
-          </div>
-       
+        </form>
+        <div className="drink-container">
+          {data === null ? <div className="drink-card-error rounded-corners"><p>No Drinks With this name!
+            </p></div> : <Card data={data} />}
+        </div>
       </div>
     </>
   );
