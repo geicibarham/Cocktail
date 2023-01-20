@@ -5,7 +5,6 @@ const Home = () => {
   const answer = useRef();
 
   const [data, SetData] = useState([]);
-
   const submit = (e) => {
     e.preventDefault();
     const drink = answer.current?.value;
@@ -20,15 +19,18 @@ const Home = () => {
       },
     };
 
+
     if (drink) {
       axios
         .request(options)
         .then(function (response) {
           SetData(response.data.drinks);
         })
+    
         .catch(function (error) {
           console.error(error);
         });
+       
     }
   };
   return (
@@ -40,8 +42,13 @@ const Home = () => {
           <button className="roundedbtn">Search Drink</button>
         </form>
         <div className="drink-container">
-          {data === null ? <div className="drink-card-error rounded-corners"><p>No Drinks With this name!
-            </p></div> : <Card data={data} />}
+          {data === null ? (
+            <div className="drink-card-error rounded-corners">
+              <p>No Drinks With this name!</p>
+            </div>
+          ) : (
+            <Card data={data} />
+          )}
         </div>
       </div>
     </>

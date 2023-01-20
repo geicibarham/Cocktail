@@ -1,18 +1,8 @@
 import icon from "../../assets/images/cocktailicon.png";
 import react,{useState} from 'react';
-
+import DrawerNav from "./Drawer";
 const Header = () => {
 
- let [style,setStyle] = useState('')
-
-  function myFunction() {
-
-    if (style === "flex") {
-      setStyle('none')
-    } else {
-      setStyle('flex')
-    }
-  }
   return (
     <header>
       <nav className="nav">
@@ -25,22 +15,11 @@ const Header = () => {
         <a className="link-navbar"href="/">Look By Ingredient</a>
         <a className="link-navbar" href="link-navbar">See a Random drink</a>
 
-       
-          {/* <a href="#home" className="active">
-            Logo
-          </a> */}
 
-          <div
-          style={{display:style}}
-           id="myLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-          </div>
-
-          <a href='#' className="icon" onClick={myFunction}>
-            <i className="fa fa-bars"></i>
-          </a>
+        <a 
+        tabIndex={'-1'}
+        id="menu" href="#" data-target="mobile-nav"
+        className="sidenav-trigger hide-on-large-only"><DrawerNav /></a>
       
       </nav>
     </header>
