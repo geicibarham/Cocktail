@@ -31,8 +31,10 @@ const Ingredient = () => {
       <button onClick={submit} className="random-drink-btn">
         Generate Random Drink
       </button>
-      <div className="drink-container">
+      <div className="drink-container-random ">
+        <div className="test">
         <Card data={data} />
+        </div>
       </div>
     </div>
   );

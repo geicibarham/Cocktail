@@ -3,14 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 1px;
 }
 
-.random-drink-btn{
-padding:20px;
-background-color: black;
-color:white;
-border: none;
-border-radius: 10px;
+.random-drink-btn {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
 }
 .alcoholic-container {
   display: flex;
@@ -24,6 +26,7 @@ border-radius: 10px;
   grid-column-start: 2;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .nav-icon {
@@ -56,9 +59,9 @@ border-radius: 10px;
   padding: 20px;
 }
 
-.recipe-btn{
- background-color: #FF5733;
- color:white;
+.recipe-btn {
+  background-color: #ff5733;
+  color: white;
 }
 .rounded-corners {
   border-radius: 20px;
@@ -152,6 +155,19 @@ footer {
   gap: 15px;
 }
 
+.drink-container-random{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 15px;
+}
+
+  .test{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: fit-content;
+  }
+
+
 .drink-card {
   background-color: #000000d4;
   color: white;
@@ -178,6 +194,7 @@ footer {
 .drink-image {
   margin-bottom: 20px;
   border-radius: 10px;
+  align-self: center;
 }
 
 .topnav {
