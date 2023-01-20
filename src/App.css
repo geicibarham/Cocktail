@@ -7,7 +7,9 @@
   letter-spacing: 1px;
 }
 
-
+#menu {
+  text-decoration: none;
+}
 li{
   margin-bottom: 10px;
 }
