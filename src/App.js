@@ -11,7 +11,7 @@ function App() {
     <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ingredient" element={<Ingredient />} />
+        <Route path="random-drink" element={<Ingredient />} />
         </Routes>
         <Footer />
   </BrowserRouter>

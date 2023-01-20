@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Card from "../drink-card/Card";
 const Ingredient = () => {
   const [data, setData] = useState([]);
-  const ingre = useRef();
+  const [submitform, setSubmit] = useState(false);
+
   const submit = (e) => {
     e.preventDefault();
 
@@ -24,18 +25,24 @@ const Ingredient = () => {
       .catch(function (error) {
         console.error(error);
       });
+    setSubmit(true);
   };
   console.log(data);
   return (
     <div className="home-outer">
-      <button onClick={submit} className="random-drink-btn">
-        Generate Random Drink
-      </button>
-      <div className="drink-container-random ">
-        <div className="test">
-        <Card data={data} />
+     
+        <button onClick={submit} className="random-drink-btn">
+          Generate Random Drink
+        </button>
+      
+
+      {submitform && (
+        <div className="drink-container-random">
+          <div className="card-random">
+            <Card data={data} />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

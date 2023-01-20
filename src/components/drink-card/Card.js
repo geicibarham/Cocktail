@@ -1,5 +1,6 @@
 import react, { useState } from "react";
 import drink from "../../assets/images/drink2.png";
+import milkshake from "../../assets/images/milkshake.png";
 const Card = (props) => {
   const [showModal, setShow] = useState(false);
   const [individual, setIndividual] = useState([]);
@@ -45,7 +46,7 @@ const Card = (props) => {
                   className="drink-image"
                   width={"30px"}
                   alt={dr.strDrink}
-                  src={`${dr.strAlcoholic === "Alcoholic" ? drink : ""}`}
+                  src={`${dr.strAlcoholic === "Alcoholic" ? drink : milkshake}`}
                 />
               </div>
               <button
@@ -62,25 +63,27 @@ const Card = (props) => {
                 alt={dr.strDrink}
                 src={dr.strDrinkThumb}
               />
-              <strong>ingredients</strong>
+              <strong>Ingredients</strong>
+              <ul>
 
-              {dr.strIngredient1 !== null && <p>⚪{dr.strIngredient1}</p>}
+              {dr.strIngredient1 !== null && <li>{dr.strIngredient1}</li>}
 
-              {dr.strIngredient2 !== null && <p>⚪{dr.strIngredient2}</p>}
+              {dr.strIngredient2 !== null && <li>{dr.strIngredient2}</li>}
 
-              {dr.strIngredient3 !== null && <p>⚪{dr.strIngredient3}</p>}
+              {dr.strIngredient3 !== null && <li>{dr.strIngredient3}</li>}
 
-              {dr.strIngredient4 !== null && <p>⚪{dr.strIngredient4}</p>}
+              {dr.strIngredient4 !== null && <li>{dr.strIngredient4}</li>}
 
-              {dr.strIngredient5 !== null && <p>⚪{dr.strIngredient5}</p>}
-              {dr.strIngredient6 !== null && <p>⚪{dr.strIngredient6}</p>}
+              {dr.strIngredient5 !== null && <li>{dr.strIngredient5}</li>}
+              {dr.strIngredient6 !== null && <li>{dr.strIngredient6}</li>}
 
-              {dr.strIngredient7 !== null && <p>⚪{dr.strIngredient7}</p>}
+              {dr.strIngredient7 !== null && <li>{dr.strIngredient7}</li>}
 
-              {dr.strIngredient8 !== null && <p>⚪{dr.strIngredient8}</p>}
+              {dr.strIngredient8 !== null && <li>{dr.strIngredient8}</li>}
 
-              {dr.strIngredient9 !== null && <p>⚪{dr.strIngredient9}</p>}
-
+              {dr.strIngredient9 !== null && <li>{dr.strIngredient9}</li>}
+              </ul>
+              {"\n"}
               <strong>Instructions</strong>
               <p>{dr.strInstructions}</p>
             </div>

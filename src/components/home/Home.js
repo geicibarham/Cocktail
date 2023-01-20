@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState,useRef } from "react";
 import axios from "axios";
 import Card from "../drink-card/Card";
 const Home = () => {
