@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import  { useState } from "react";
 import drink from "../../assets/images/drink2.png";
 import milkshake from "../../assets/images/milkshake.png";
 const Card = (props) => {
