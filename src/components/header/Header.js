@@ -25,7 +25,7 @@ const Header = () => {
           </a>
         </Link>
 
-        <li
+        <p
       
           tabIndex={"-1"}
           id="menu"
@@ -34,7 +34,7 @@ const Header = () => {
           className="sidenav-trigger hide-on-large-only"
         >
           <DrawerNav />
-        </li>
+        </p>
       </nav>
     </header>
   );
